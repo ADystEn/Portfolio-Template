@@ -1,0 +1,30 @@
+
+@media (min-width: 1025px){
+
+    /*Nav-Items-Box*/
+    .nav-items-box {
+        flex-direction: row; 
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    /*Nav-Item-Dropdown*/
+    .nav-item-dropdown.active .nav-link::after {
+        transform: rotate(180deg); /* Dreht den Pfeil */
+    }
+
+    /*Nav-Item-Dropdown :
+        : DropdownMenu*/
+    .dropdown-menu.active {
+        position: absolute;
+        width: auto;
+    }
+
+    .nav-burger-menu-box {
+        display: none; 
+        
+    }
+
+}
+
+
