@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuNode Digital</title>
+    <link rel="icon" href="../../image/favicon2.png" type="image/png">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles-desktop.css">
+    <link rel="stylesheet" href="../../css/styles-mobile.css">
+
+    <link rel="stylesheet" href="../../css/navbar-gen.css">
+    <link rel="stylesheet" href="../../css/navbar-desktop.css">
+    <link rel="stylesheet" href="../../css/navbar-mobile.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- LOGO KOPF-->
+        <div class="logoboxA">
+            <div class="logobox1">
+                <img class="corporatelogo1" src="../../image/nameLogo3.png" alt="logo">
+            </div>
+            <div class="logobox1">
+                <img class="corporatelogo2" src="../../image/startlogo4.png" alt="logo">
+            </div>
+        </div>
+        
+        <!--NAVBAR -->
+        <nav class="navbar">
+            <!-- Nav Structurepanel -->
+            <nav class="navbar-structurepanel">
+                <!-- Nav Logo Box -->
+                <nav class="nav-logo-box">
+                    <a href="../../index.html">
+                        <img class="nav-logo"src="../../image/homelogo1.png" alt="btc-img">
+                    </a>
+                </nav>
+                <!-- Nav Item Box -->
+                <nav class="nav-items-box">
+                    <div class="nav-item">
+                        <a href="../../index.html" class="nav-link">Home</a>
+                    </div>
+                    <div class="nav-item-dropdown">
+                        <a class="nav-link">Themen</a>
+                        <div class="dropdown-menu">
+                            <a href="../../sites/cysec/cysec.html">Cybersecurity</a>
+                            <a href="../../sites/webdevelopment/webdevelopment.html">Webdevelopment</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link">Über</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link">Kontakt</a>
+                    </div>
+                </nav>
+                <nav class="home-switch">
+                    <a href="#top"></a>
+                </nav>
+                <nav class="burger-off-switch">
+                    <a></a>
+                </nav>
+                <!-- Nav Burger Box -->
+                <nav class="nav-burger-menu-box">
+                    <a >&#9776</a> <!-- Unicode für das Burger-Icon -->
+                </nav>
+            </nav>
+        </nav>
+
+    </header>
+
+    <!-- View: Start-->
+     
+     <!-- Path-->
+    <div class="path-link">://Home/Software-Engineering</div>
+    <!-- Start-->
+    <div class="start">
+        <div class="catalogue">
+                <p class="catalogue-h1">Projekte</p>
+                <p class="catalogue-h2">Automated Trading</p>
+                <ul>
+                    <li class="catalogue-h2-li"><a href="#tradingboard">Python: Tradingboard</a></li>
+                    <li class="catalogue-h2-li"><a href="#nodejs">NodeJS: Gateway </a></li>
+                    <li class="catalogue-h2-li"><a href="#mql">MQL: Expert Advisor</a></li>
+                </ul>
+        </div>
+        <div class="base-container">
+            <div class="content-box">
+                
+                <h1>Automated Trading</h1>
+                <h2>Einleitung</h2>
+                <p>
+                    In diesem Projekt geht es darum, eine Software zu schreiben die aus mehreren konzeptionellen Einheiten
+                    besteht. 
+                    <br>
+                    <br>
+                    
+                    
+                    <h3>1.Konzept: Logiken sollen automatisiert Anweisungen durchführen.</h3>
+                    <p>    
+                        Die Herausforderungen hierbei sind unter anderem, dass unterschiedliche Broker- oder Tradingplattformen unterschiedliche
+                        Schnittstellen und damit hauseigene Parameter zu diesem Zweck zur Verfügung stellen. 
+                        <br>
+                        <br>
+                        Der Lösungsansatz ist es, eine Nutzeroberfläche zu schaffen, in denen die unterschiedlichen Anbieterservices
+                        jeweils übersichtlich anwählbar sind für weitere Optionen und Handlungsanweisungen. 
+                        <br>
+                        Zum gegenwärtigen Zeitpunkt ist es auf eine spezifische Schnittstelle gerichtet, nämlich "MetaTrader 5" mit dessen
+                        ganz eigener Sprachbibliothek "MQL5".
+                    </p>    
+                    <br>
+                    <h3>2. Konzept: Gewährleistung der Modularität und Anpassbarkeit</h3>
+                    <p>   
+                        Eine weitere Herausforderung ist, insbesondere im Umgang mit besagter Plattform "Metatrader 5", dass innerhalb dieser Umgebung
+                        sogenannte ExpertAdvisor als automatisierte Skripte die Anweisungen durchführen. Diese sind in "MQL5" geschrieben.
+                        <br>
+                        Will man eine eigene Logik entwerfen die innerhalb dieser Plattform ihren Dienst aufnimmt oder lassen sich 
+                        Datenauswertung, Marktüberwachung, Entscheidungsfindung etc. extern abbilden?
+                        <br>
+                        <br>
+                        Der Lösungsansatz in diesem Fall ist es, die Marktüberwachung inklusive der Fallentscheidung vollständig extern zu gestalten.
+                        Damit wird der sogenannte ExpertAdivsor auf das simple beschaffen von Informationen sowie das ausführen simpler
+                        Anweisungen beschränkt, indessen die eigentliche Intelligenz externalisiert stattfindet. Zu diesem Zweck wurde sich
+                        für die Sprache "Python" mit seinen geeigneten Erweiterungen entschieden.
+                        <br>
+                        <br>
+                        Durch diese Herangehensweise lassen sich laufend Programmanpassungen gestalten die auf neuen technologischen als auch
+                        marktspezifischen Erkenntnissen beruhen. Die Marktausführung selbst bleibt schlank, die Herausforderungen im Umgang mit "MQL5"
+                        bleiben überschaubar, die Fundamente zur modularen Erweiterung der Anwendung sind gelegt.
+                    </p>     
+                    <h3>3. Konzept: Gebrückte Informationen zur Auslagerung der Dauernutzung</h3>
+                    <p>    
+                        Bei Anbieterplattformen welche bspw. pythonbasierte API's zur Verfügung stellen, ließen sich grundsätzlich direkte 
+                        Kommunikationskanäle aufbauen wie bspw. über die Erweiterung Websocket.
+                        <br>
+                        <br>
+                        Doch diese art der Echtzeitdatenübertragung ist über Metatrader nicht in jedem Fall gegeben. Insbesondere Nutzer von 
+                        Linux Distributionen haben keinen direkten Zugriff auf die Pythonbibliotheken von Metatrader.
+                        <br>
+                        <br>
+                        Doch Metatrader5 bzw. die Sprache MQL stellt die sogenannte Methode "Webrequest" grundsätzlich zur Verfügung.
+                        Dadurch kann der Expertadvisor über das http-Protokoll netzwerkübergreifend kommunizieren.
+                        <br>
+                        <br>
+                        Somit ist klar, es bedarf eines Gateways. Und die Entscheidung fiel in diesem Fall auf einen NodeJS-Expressserver welcher
+                        auch das Websocket integriert.
+                        <br>
+                        <br>
+                        NodeJS fungiert hier als Informationsübermittler zwischen Nutzer und Datenprozessverarbeitung (intern) sowie 
+                        zwischen diesen und dem Expertadvisor. 
+                        <br>
+                        <br>
+                        Damit ist gewährleistet, dass zu einem späteren Zeitpunkt die Datenverarbeitung und Entscheidungsfindung auf einen
+                        Server ausgelagert werden können, indessen bei Bedarf von einem UserClientDesktop, der Zugriff per remote-control etabliert bleibt.
+                        Die sogenannte Automation läuft also auch dann weiter, wenn der Anwender sein persönliches Gerät ausschaltet.
+                    </p>   
+                   
+                    
+                </p>
+            </div>
+                <div class="content-box" id="tradingboard">
+                    <h2>Python: Tradingboard</h2>
+
+                    <div class="img-box">
+                        <a href="../software/automated trading/python-app.png" class="" target="_blank">
+                            <img src="../software/automated trading/python-app.png" alt="python-app">
+                        </a>
+                    </div>
+                </div> 
+                <div class="content-box" id="nodejs">
+                    <h2>NodeJS-Expressserver</h2>
+
+                    <div class="img-box">
+                        <a href="../software/automated trading/nodejs-server.png" class="" target="_blank">
+                            <img src="../software/automated trading/nodejs-server.png" alt="NodeJS-Expressserver">
+                        </a>
+                    </div>
+                </div> 
+                <div class="content-box" id="mql">
+                    <h2>MQL: Expert Advisor</h2>
+
+                    <div class="img-box">
+                        <a href="../software/automated trading/expertadvisor.png" class="" target="_blank">
+                            <img src="../software/automated trading/expertadvisor.png" alt="MQL: Expert Advisor">
+                        </a>
+                    </div>
+                </div>  
+        </div>
+    </div>
+
+    <!-- FOOTER-->
+    <footer class="footer-container">
+        <div class="footer-box-A">
+            <div class="footer-box1">
+                <a href="https://github.com/ADystEn"  target="_blank">
+                    <img class="github-logo"src="../../image/footer/github-mark/github-mark-white.png" alt="github-logo">
+                </a>
+            </div>
+            <div class="footer-box2">
+                <a href="../../sites/impressum/impressum.html">Impressum</a>
+                <a href="../../sites/datenschutz/datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="../../frontjs/navbar-control/burgermenu.js"></script>
+    <script src="../../frontjs/navbar-control/nav-item-dropdown.js"></script>
+    <script src="../../frontjs/navbar-control/home-switch.js"></script>
+    <script src="../../frontjs/navbar-control/off-switch.js"></script>
+
+</body>
+</html>

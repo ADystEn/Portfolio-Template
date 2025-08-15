@@ -1,0 +1,189 @@
+@media (max-width: 1024px) {
+    /*Navbar */
+    .navbar {
+        position: unset;
+    }
+    /*Navbar Struktur Panel*/
+    .navbar-structurepanel {
+        justify-content: space-between;  
+        flex-wrap: wrap;
+    }
+    /*Nav-Items-Box*/
+    .nav-items-box {
+        display: none; 
+    }
+    .nav-items-box.active{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        max-width: 60%;
+        width: 100%;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        border: 2px rgba(8, 241, 241, 0.5) solid;
+        overflow: hidden;
+    }
+    /*Nav-Item*/
+    .nav-item {
+        width: 100%;
+        height: auto; 
+        min-height: 50px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(8, 241, 241, 0.719);
+        background-color: rgba(0, 0, 0, 0.75);
+        color: aliceblue;
+    }
+    .nav-item:hover {
+        background-color: rgba(63, 63, 63, 0.85);
+    }
+    /*Nav Links*/
+    .nav-link {
+        margin: 0 30px;
+    }
+    /*Nav-Item-Dropdown*/
+    .nav-item-dropdown {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: 50px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(8, 241, 241, 0.719);
+        background-color: rgba(0, 0, 0, 0.75);
+        color: aliceblue;
+    }
+    .nav-item-dropdown .nav-link{
+        display: flex;
+        height: auto; /* Automatische Höhe */
+        min-height: 50px;
+        align-items: center; 
+    }
+    .nav-item-dropdown:hover {
+        background-color: rgba(63, 63, 63, 0.85);
+    }
+   
+    .nav-item-dropdown.active:hover {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    .nav-item-dropdown.active .nav-link{
+        width: 100%;
+        justify-content: center;
+        color:#091936;
+        background-color: #a4f9ff;
+        color:"";
+    }
+    .dropdown-menu.active {    
+        position: static;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .dropdown-menu.active a{
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: auto; 
+        min-height: 50px; 
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .dropdown-menu a:hover{
+        background-color: rgba(63, 63, 63, 0.85);
+    }
+    /*BurgerMenu */
+    .nav-burger-menu-box {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        width: 50px;
+        height: 50px; 
+        border: 1px #091936 solid;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 15px;
+        cursor: pointer;
+    }
+    .nav-burger-menu-box.active {
+        background-color: #091936;
+        color: aliceblue;
+        height: auto; 
+        min-height: 50px;
+    }
+    /* ########################### Burger : OFF-Switch */
+    .burger-off-switch, .burger-off-switch a{
+        display: none;
+    }
+    .burger-off-switch.active {
+        display: none;
+        position: fixed; 
+        bottom: 10px;    
+        right: 15px;     
+        z-index: 998;
+        opacity: 1;
+        transition: opacity 2s ease; 
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+    .burger-off-switch.active a{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .burger-off-switch.active a::after{
+        content: "\2716";
+    }
+    /* ########################### Burger : Home-Switch */
+    .home-switch{
+        display:none;
+        position: fixed; 
+        bottom: 10px;    
+        left: 50%;      
+        transform: translateX(-50%); 
+        z-index: 998;
+        transition: opacity 0.5s ease;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 50%;
+    }
+    .home-switch a{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;   
+        font-weight: bold;  
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .home-switch a::after{
+        content: "\2302";
+    }
+}
