@@ -92,72 +92,80 @@
                 <h1>Automated Trading</h1>
                 <h2>Einleitung</h2>
                 <p>
-                    In diesem Projekt geht es darum, eine Software zu schreiben die aus mehreren konzeptionellen Einheiten
-                    besteht. 
+                    In diesem Projekt wird eine Software entwickelt, die sich aus mehreren klar definierten konzeptionellen Modulen zusammensetzt. 
                     <br>
                     <br>
                     
                     
-                    <h3>1.Konzept: Logiken sollen automatisiert Anweisungen durchführen.</h3>
+                    <h3>1. Das erste Konzept umfasst die Entwicklung von Handelsogiken, die in der Lage sind, Anweisungen automatisiert auszuführen.</h3>
                     <p>    
-                        Die Herausforderungen hierbei sind unter anderem, dass unterschiedliche Broker- oder Tradingplattformen unterschiedliche
-                        Schnittstellen und damit hauseigene Parameter zu diesem Zweck zur Verfügung stellen. 
+                        „Die zentrale Herausforderung besteht darin, dass verschiedene Broker- und Tradingplattformen jeweils 
+                        eigene Schnittstellen mit individuellen Parametern bereitstellen.
                         <br>
                         <br>
-                        Der Lösungsansatz ist es, eine Nutzeroberfläche zu schaffen, in denen die unterschiedlichen Anbieterservices
-                        jeweils übersichtlich anwählbar sind für weitere Optionen und Handlungsanweisungen. 
+                        Der Lösungsansatz liegt daher in der Entwicklung einer Benutzeroberfläche, die es ermöglicht, 
+                        die unterschiedlichen Anbieter-Services übersichtlich auszuwählen und für weitere Optionen sowie 
+                        Handlungsanweisungen zugänglich zu machen.
                         <br>
-                        Zum gegenwärtigen Zeitpunkt ist es auf eine spezifische Schnittstelle gerichtet, nämlich "MetaTrader 5" mit dessen
-                        ganz eigener Sprachbibliothek "MQL5".
+                        <br>
+                        Der aktuelle Stand des Projekts fokussiert sich auf eine spezifische Schnittstelle, 
+                        nämlich MetaTrader 5, und dessen proprietäre Programmiersprache MQL5.“
                     </p>    
                     <br>
-                    <h3>2. Konzept: Gewährleistung der Modularität und Anpassbarkeit</h3>
+                    <h3>2. Gewährleistung von Modularität und Anpassbarkeit</h3>
                     <p>   
-                        Eine weitere Herausforderung ist, insbesondere im Umgang mit besagter Plattform "Metatrader 5", dass innerhalb dieser Umgebung
-                        sogenannte ExpertAdvisor als automatisierte Skripte die Anweisungen durchführen. Diese sind in "MQL5" geschrieben.
-                        <br>
-                        Will man eine eigene Logik entwerfen die innerhalb dieser Plattform ihren Dienst aufnimmt oder lassen sich 
-                        Datenauswertung, Marktüberwachung, Entscheidungsfindung etc. extern abbilden?
+                        Eine zusätzliche Herausforderung besteht insbesondere im Umgang mit der Plattform MetaTrader 5. In dieser Umgebung werden sogenannte 
+                        Expert Advisors (EA) eingesetzt, also automatisierte Skripte, die Handelsanweisungen selbstständig ausführen. 
+                        Diese Skripte basieren auf der proprietären Sprache MQL5, was besondere Anforderungen an Entwicklung und Integration stellt.
                         <br>
                         <br>
-                        Der Lösungsansatz in diesem Fall ist es, die Marktüberwachung inklusive der Fallentscheidung vollständig extern zu gestalten.
-                        Damit wird der sogenannte ExpertAdivsor auf das simple beschaffen von Informationen sowie das ausführen simpler
-                        Anweisungen beschränkt, indessen die eigentliche Intelligenz externalisiert stattfindet. Zu diesem Zweck wurde sich
-                        für die Sprache "Python" mit seinen geeigneten Erweiterungen entschieden.
+                        Eine zentrale Fragestellung ist, ob eigene Logiken direkt innerhalb der Plattform implementiert werden sollen – 
+                        sodass sie dort ihren Dienst aufnehmen – 
+                        oder ob sich Prozesse wie Datenauswertung, Marktüberwachung und Entscheidungsfindung besser in externen Systemen abbilden lassen.
                         <br>
                         <br>
-                        Durch diese Herangehensweise lassen sich laufend Programmanpassungen gestalten die auf neuen technologischen als auch
-                        marktspezifischen Erkenntnissen beruhen. Die Marktausführung selbst bleibt schlank, die Herausforderungen im Umgang mit "MQL5"
-                        bleiben überschaubar, die Fundamente zur modularen Erweiterung der Anwendung sind gelegt.
+                        Der Lösungsansatz in diesem Fall besteht darin, die Marktüberwachung sowie die Entscheidungsfindung vollständig extern abzubilden. 
+                        Der sogenannte Expert Advisor wird dadurch auf die reine Beschaffung von Informationen und die Ausführung einfacher Anweisungen reduziert, 
+                        während die eigentliche Logik und ‚Intelligenz‘ in ein externes System ausgelagert wird. Für die Umsetzung wurde die Programmiersprache Python
+                        gewählt, 
+                        da sie mit ihren vielfältigen Erweiterungen und Bibliotheken ein leistungsfähiges Fundament für Analyse und Automatisierung bietet.
+                        <br>
+                        <br>
+                        Durch diese Herangehensweise können kontinuierlich Programmanpassungen vorgenommen werden, 
+                        die sowohl auf neuen technologischen Entwicklungen als auch auf marktspezifischen Erkenntnissen basieren. 
+                        Die eigentliche Marktausführung bleibt dabei schlank, die Komplexität im Umgang mit MQL5 reduziert 
+                        sich auf ein überschaubares Maß, 
+                        und gleichzeitig werden die Grundlagen für eine modulare Erweiterung der Anwendung geschaffen.
                     </p>     
-                    <h3>3. Konzept: Gebrückte Informationen zur Auslagerung der Dauernutzung</h3>
+                    <h3>3. Gebündelte Informationen zur Auslagerung der Dauernutzung</h3>
                     <p>    
-                        Bei Anbieterplattformen welche bspw. pythonbasierte API's zur Verfügung stellen, ließen sich grundsätzlich direkte 
-                        Kommunikationskanäle aufbauen wie bspw. über die Erweiterung Websocket.
+                        Bei Anbieterplattformen, die Python-basierte APIs bereitstellen, besteht grundsätzlich die Möglichkeit, 
+                        direkte Kommunikationskanäle einzurichten – beispielsweise über WebSockets. 
+                        Dadurch lassen sich Datenströme in Echtzeit effizient verarbeiten und Befehle unmittelbar übertragen, 
+                        ohne dass aufwendige Zwischenlösungen notwendig sind.
                         <br>
                         <br>
-                        Doch diese art der Echtzeitdatenübertragung ist über Metatrader nicht in jedem Fall gegeben. Insbesondere Nutzer von 
-                        Linux Distributionen haben keinen direkten Zugriff auf die Pythonbibliotheken von Metatrader.
+                        Allerdings ist eine derartige Echtzeit-Datenübertragung über MetaTrader nicht in allen Fällen möglich. 
+                        Insbesondere Nutzer von Linux-Distributionen haben keinen direkten Zugriff auf die Python-Bibliotheken von MetaTrader, 
+                        wodurch alternative Brückenkonzepte notwendig werden.
                         <br>
                         <br>
-                        Doch Metatrader5 bzw. die Sprache MQL stellt die sogenannte Methode "Webrequest" grundsätzlich zur Verfügung.
-                        Dadurch kann der Expertadvisor über das http-Protokoll netzwerkübergreifend kommunizieren.
+                        MetaTrader 5 bzw. die Programmiersprache MQL5 stellt grundsätzlich die Methode „WebRequest“ zur Verfügung. 
+                        Dadurch kann der ExpertAdvisor netzwerkübergreifend über das HTTP-Protokoll kommunizieren.
                         <br>
                         <br>
-                        Somit ist klar, es bedarf eines Gateways. Und die Entscheidung fiel in diesem Fall auf einen NodeJS-Expressserver welcher
-                        auch das Websocket integriert.
+                        Daraus ergibt sich die Notwendigkeit eines Gateways. 
+                        In diesem Fall fiel die Entscheidung auf einen Node.js-Express-Server, der zudem die Integration von WebSocket ermöglicht.
                         <br>
                         <br>
-                        NodeJS fungiert hier als Informationsübermittler zwischen Nutzer und Datenprozessverarbeitung (intern) sowie 
-                        zwischen diesen und dem Expertadvisor. 
+                        Node.js fungiert in diesem System als zentraler Informationsvermittler – 
+                        sowohl zwischen Nutzer und interner Datenverarbeitung als auch zwischen diesen Komponenten und dem ExpertAdvisor. 
                         <br>
                         <br>
-                        Damit ist gewährleistet, dass zu einem späteren Zeitpunkt die Datenverarbeitung und Entscheidungsfindung auf einen
-                        Server ausgelagert werden können, indessen bei Bedarf von einem UserClientDesktop, der Zugriff per remote-control etabliert bleibt.
-                        Die sogenannte Automation läuft also auch dann weiter, wenn der Anwender sein persönliches Gerät ausschaltet.
-                    </p>   
-                   
-                    
+                        Damit wird sichergestellt, dass die Datenverarbeitung und Entscheidungsfindung bei Bedarf auf einen Server ausgelagert werden können, 
+                        während gleichzeitig ein User-Client-Desktop über Remote-Zugriff verbunden bleiben kann. 
+                        Die Automatisierung läuft somit auch dann weiter, wenn der Anwender sein persönliches Gerät ausschaltet.
+                    </p>    
                 </p>
             </div>
                 <div class="content-box" id="tradingboard">
