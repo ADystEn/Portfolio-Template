@@ -18,4 +18,31 @@
         display: flex;
         flex-direction: column;
     }
+    .article-box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 10px;
+        justify-content: space-evenly; 
+        align-content: center;  
+        justify-items: center;   
+        align-items: center;    
+    }
+    .article-box .content-box ul {
+    margin: 0;       
+    padding: 0;    
+    list-style-position: inside; 
+    }
+    .article-box .content-box li {
+        margin: 0.3em 0; 
+    }
+    .gallery-box {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+        gap: 8px;
+    }
+    .gallery-box .img-box img{
+        height: 100px;      /* kleinere Höhe für mobile */
+    }
+    .gallery-box .img-box figcaption {
+        font-size: 0.8rem;  /* kleinere Schrift für mobile */
+    }
 }
